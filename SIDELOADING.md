@@ -42,12 +42,12 @@ device, still your own Google Cloud project, no server.
 ## 2. Create the Google client with *your* bundle ID
 
 The sideloading tool gives the app a bundle ID unique to your Apple ID, usually
-`net.dehlwes.pulse.<TEAMID>`. Create the Google iOS client with exactly that one:
+`com.saidmaamari.pulse.<TEAMID>`. Create the Google iOS client with exactly that one:
 
 1. Open Pulse and tap **Connect Google Health**. The screen shows **Bundle ID of this
    app**, long-press to copy it.
 2. Follow [`SETUP.md`](SETUP.md), Part 1. In step 5 (iOS client ID) enter the bundle
-   ID from Pulse instead of `net.dehlwes.pulse`.
+   ID from Pulse instead of `com.saidmaamari.pulse`.
 3. Paste the client ID into Pulse and sign in.
 
 Nothing else differs from the Xcode build. No Google setup yet? **Demo mode** on the

@@ -425,7 +425,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.dehlwes.pulse.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saidmaamari.pulse.widget;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -505,7 +505,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.dehlwes.pulse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saidmaamari.pulse;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -523,7 +523,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.dehlwes.pulse.widget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saidmaamari.pulse.widget;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -543,7 +543,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.dehlwes.pulse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.saidmaamari.pulse;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

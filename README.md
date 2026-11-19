@@ -82,7 +82,7 @@ open Pulse.xcodeproj      # NOT the folder or Package.swift — pick the "Pulse"
 
 In Xcode: target **Pulse** → *Signing & Capabilities* → your personal team (a free
 Apple ID is enough) → connect the iPhone → ▶︎ Run. In the app, tap **Connect Google
-Health**, paste your OAuth client ID (iOS client, bundle id `net.dehlwes.pulse`,
+Health**, paste your OAuth client ID (iOS client, bundle id `com.saidmaamari.pulse`,
 PKCE — no client secret), sign in, done. No Google setup? Start **Demo mode** for 120
 days of realistic sample data.
 

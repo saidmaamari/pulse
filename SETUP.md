@@ -60,7 +60,7 @@ in this repository.
    - `…/auth/googlehealth.profile.readonly`
 5. **Create an iOS client ID:** APIs & Services → **Credentials** →
    *Create Credentials* → *OAuth client ID* → application type **iOS** → bundle ID
-   matching the one in `project.yml` (default `net.dehlwes.pulse`, change it to your
+   matching the one in `project.yml` (default `com.saidmaamari.pulse`, change it to your
    own reverse-domain id when you fork). Sideloaded the IPA? Then use the bundle ID
    that Pulse shows on its *Connect Google Health* screen, the sideloading tool
    changes it. Copy the generated client ID, it looks like
