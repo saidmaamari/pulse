@@ -21,3 +21,11 @@ The metric methodology is derived from publicly published research, not from any
 third party's proprietary algorithms. Sources are cited in README.de.md
 (FRIEND registry / Kaminsky 2015; Mandsager, JAMA Netw Open 2018; Uth 2004;
 Zhang, CMAJ 2016; Tanaka 2001; Karvonen).
+
+--------------------------------------------------------------------------------
+Modifications
+
+This fork (https://github.com/saidmaamari/pulse) is modified by Said Al Maamari:
+- Bundle identifier changed from net.dehlwes.pulse to com.saidmaamari.pulse.
+- Source code comments, log messages, error messages and self-test messages
+  translated from German to English. The in-app German/English UI is unchanged.
