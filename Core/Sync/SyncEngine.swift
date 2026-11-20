@@ -43,6 +43,13 @@ public struct SyncOutcome: Sendable {
 /// geladen — ein Fehler (z.B. ein noch nicht verfügbarer Datentyp) blockiert
 /// die übrigen Metriken nicht, sondern landet nur im Sync-Log.
 public final class SyncEngine: @unchecked Sendable {
+    /// Wertfelder für HRV-Samples bzw. Tages-HRV. Die Google-Health-API v4
+    /// liefert `rootMeanSquareOfSuccessiveDifferencesMilliseconds` (Samples)
+    /// und `averageHeartRateVariabilityMilliseconds` (Tageswert); der Rest
+    /// sind Fallbacks für ältere/abweichende Formate.
+    public static let hrvSampleKeys = ["rootMeanSquareOfSuccessiveDifferencesMilliseconds", "rmssd", "rmssdMilliseconds", "milliseconds", "dailyRmssd", "value"]
+    public static let hrvDailyKeys = ["averageHeartRateVariabilityMilliseconds", "rmssdMilliseconds", "rmssd", "milliseconds", "value"]
+
     private let client: HealthAPIClient
 
     public init(client: HealthAPIClient) {
@@ -145,7 +152,7 @@ public final class SyncEngine: @unchecked Sendable {
             let result = try await client.fetchSamplesDetailed(
                 type: "heart-rate-variability",
                 payloadKey: "heartRateVariability",
-                valueKeys: ["rmssd", "rmssdMilliseconds", "milliseconds", "dailyRmssd", "value"],
+                valueKeys: Self.hrvSampleKeys,
                 start: windowStart.addingTimeInterval(-12 * 3600),
                 end: windowEnd
             )
@@ -164,7 +171,7 @@ public final class SyncEngine: @unchecked Sendable {
                     let daily = try await client.fetchDailyValues(
                         type: "daily-heart-rate-variability",
                         payloadKey: "dailyHeartRateVariability",
-                        valueKeys: ["rmssdMilliseconds", "rmssd", "milliseconds", "value"],
+                        valueKeys: Self.hrvDailyKeys,
                         start: windowStart,
                         end: windowEnd
                     )
